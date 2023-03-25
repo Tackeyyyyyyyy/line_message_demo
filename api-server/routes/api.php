@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\LineWebhookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/line/message/send', [LineWebhookController::class, 'sendMessage']);
+Route::get('/line/message/image', [LineWebhookController::class, 'sendImage']);
+Route::get('/line/message/flex', [LineWebhookController::class, 'sendFlexMessage']);
+Route::get('/line/message/profile', [LineWebhookController::class, 'getProfile']);
+Route::post('/line/webhook/callback', [LineWebhookController::class, 'callback']);
