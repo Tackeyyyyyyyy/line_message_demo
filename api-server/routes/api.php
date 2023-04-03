@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/line/message/send', [LineWebhookController::class, 'sendMessage']);
 Route::get('/line/message/image', [LineWebhookController::class, 'sendImage']);
+Route::get('/line/message/stamp', [LineWebhookController::class, 'sendStamp']);
 Route::get('/line/message/flex', [LineWebhookController::class, 'sendFlexMessage']);
 Route::get('/line/message/profile', [LineWebhookController::class, 'getProfile']);
 Route::post('/line/webhook/callback', [LineWebhookController::class, 'callback']);
