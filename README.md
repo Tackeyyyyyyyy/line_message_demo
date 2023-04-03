@@ -12,7 +12,7 @@ LINE_MESSAGE_CHANNEL_SECRET=
 LINE_MESSAGE_CHANNEL_TOKEN=
 DEMO_LINE_USER_ID=
 
-3. composer install
+3. cd api-server && composer install
 4. php artisan serve
 6. ngrok http 8000
 
