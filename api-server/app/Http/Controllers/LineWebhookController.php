@@ -44,6 +44,8 @@ class LineWebhookController extends BaseController
                 } else if (preg_match('/タンメン/u', $event['message']["text"])) {
                     $bot->sendTextMessage(env('DEMO_LINE_USER_ID'), "あいよー！");
                     $bot->sendImageMessage(env('DEMO_LINE_USER_ID'), "https://free-materials.com/adm/wp-content/uploads/2019/12/adpDSC_2194-1024x683.jpg");
+                } else {
+                    $bot->sendTextMessage(env('DEMO_LINE_USER_ID'), "└(　'ω'　)┘ﾏｯｽﾙ");
                 }
             }
 
